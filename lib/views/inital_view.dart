@@ -25,15 +25,15 @@ class _InitialViewState extends State<InitialView> {
 
   Widget build(BuildContext context) {
     print('Sort by: ${widget.sortby}');
-    if (widget.sortby == "author"){
-      widget.bookList.sort((a, b) {
-        return a.bookAuthor.compareTo(b.bookAuthor);
-      });
-    }else{
-      widget.bookList.sort((a, b) {
-        return a.bookTitle.compareTo(b.bookTitle);
-      });
-    }
+    // if (widget.sortby == "author"){
+    //   widget.bookList.sort((a, b) {
+    //     return a.bookAuthor.compareTo(b.bookAuthor);
+    //   });
+    // }else{
+    //   widget.bookList.sort((a, b) {
+    //     return a.bookTitle.compareTo(b.bookTitle);
+    //   });
+    // }
     
     return Scaffold(
       appBar: AppBar(
