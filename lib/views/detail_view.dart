@@ -1,0 +1,104 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hw_three_app/bloc/book_bloc.dart';
+import 'package:hw_three_app/model/book.dart';
+
+class DetailView extends StatelessWidget {
+  final Book book;
+  const DetailView({super.key, required this.book});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            context.read<BookBloc>().add(SortedByTitleEvent());
+          },
+        ),
+        title: const Text("Book Detail"),
+        centerTitle: true,
+        actions: [SizedBox(width: 56, child: Icon(Icons.account_circle))],
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(20),
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: 15,
+            children: [
+              Container(
+                width: 200,
+                height: 333.33,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 0,
+                      top: 0,
+                      child: Container(
+                        width: 200,
+                        height: 333.33,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(book.coverURL),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 353,
+                child: Text(
+                  book.bookTitle,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 28,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w400,
+                    height: 1.29,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 353,
+                child: Text(
+                  book.bookAuthor,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 22,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w400,
+                    height: 1.27,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 353,
+                child: Text(
+                  book.bookDescription,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w400,
+                    height: 1.43,
+                    letterSpacing: 0.25,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
