@@ -29,7 +29,7 @@ class BookCoverWidget extends StatelessWidget {
                 height: 166.67,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage(book.coverURL),
+                    image: AssetImage(book.coverURL),
                     fit: BoxFit.cover,
                   ),
                 ),

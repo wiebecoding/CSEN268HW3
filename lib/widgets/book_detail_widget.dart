@@ -31,7 +31,7 @@ class BookDetailWidget extends StatelessWidget{
                         height: 333.33,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: NetworkImage(book.coverURL),
+                            image: AssetImage(book.coverURL),
                             fit: BoxFit.cover,
                           ),
                         ),

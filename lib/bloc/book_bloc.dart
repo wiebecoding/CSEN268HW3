@@ -15,33 +15,33 @@ class BookBloc extends Bloc<BookEvent, BookState> {
         bookTitle: "1984",
         bookAuthor: "George Orwell",
         bookDescription: "A dystopian novel set in a totalitarian society.",
-        coverURL: "https://m.media-amazon.com/images/I/71rpa1-kyvL.jpg",
+        coverURL: "lib/images/orwell.jpg",
       ),
       Book(
         bookTitle: "To Kill a Mockingbird",
         bookAuthor: "Harper Lee",
         bookDescription: "A novel about racial injustice in the Deep South.",
         coverURL:
-            "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UF1000,1000_QL80_.jpg",
+            "lib/images/Mockingbird.jpg",
       ),
       Book(
         bookTitle: "The Great Gatsby",
         bookAuthor: "F. Scott Fitzgerald",
         bookDescription: "A story of wealth, love, and the American Dream.",
-        coverURL: "https://m.media-amazon.com/images/I/81n682DOVAL.jpg",
+        coverURL: "lib/images/great.jpg",
       ),
       Book(
         bookTitle: "Moby Dick",
         bookAuthor: "Herman Melville",
         bookDescription: "A tale of obsession and revenge on the high seas.",
-        coverURL: "https://m.media-amazon.com/images/I/610qaD5PskL.jpg",
+        coverURL: "lib/images/moby.jpg",
       ),
       Book(
         bookTitle: "Pride and Prejudice",
         bookAuthor: "Jane Austen",
         bookDescription: "A romantic novel about manners and marriage.",
         coverURL:
-            "https://m.media-amazon.com/images/I/91E9-FyfvGL._AC_UF1000,1000_QL80_.jpg",
+            "lib/images/pride.jpg",
       ),
     ];
 
